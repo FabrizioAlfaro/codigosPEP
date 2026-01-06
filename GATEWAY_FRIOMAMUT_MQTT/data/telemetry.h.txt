@@ -1,0 +1,16 @@
+#pragma once
+#include <stdint.h>
+
+typedef struct Telemetry {
+  uint16_t dev_id;
+  uint32_t boot_id;
+  uint32_t ctr24;
+  int16_t  temp_x100;
+  uint16_t vin_mv;
+  uint8_t  flags;
+} Telemetry;
+
+typedef struct RawAdvMsg {
+  uint8_t mfg[23];
+  int8_t  rssi;
+} RawAdvMsg;
